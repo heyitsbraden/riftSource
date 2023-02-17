@@ -20,7 +20,7 @@ int coins = 0;
 int Ulevel = 1;
 int xp = 0;
 const char defend[6] = "false";
-int singlePlayer() {
+int main() {
 std::string user_potion_pick;
 if (user_potion_pick == "1") {
   hb = hb - 12; }
@@ -50,12 +50,36 @@ if (user_action == "a") {
   score = score + 15; }
 if (user_action == "d") {
   std::cout << "You defended yourself from the basses attacks!";
-  defend[6] == true;
   bha = 0;
 }
 if (user_action == "h") {
   std::cout << "\nYou regain some health.\n";
   ph = ph + heal; }
+if (user_action == "e") {
+  std::cout << "\nHere are the pets currently avalible";
+  std::cout << "\n[Rock Pet]";
+  std::cout << "\n[Fairy Pet]";
+  std::cout << "\n[Faithful Doggo]";
+  std::cout << "\n[middle finger]\n";
+  std::string user_pets;
+  std::cin >> user_pets;
+  if (user_pets == "1") {
+    std::cout << "\nThe rock pet joins your team";
+    std::this_thread::sleep_for(std::chrono::milliseconds(800));
+  }
+  if (user_pets == "2") {
+    std::cout << "\nThe fairy pet joins your team";
+    std::this_thread::sleep_for(std::chrono::milliseconds(800));
+  }
+  if (user_pets == "3") {
+    std::cout << "The faithful doggo joins your team";
+    std::this_thread::sleep_for(std::chrono::milliseconds(800));
+  }
+  if (user_pets == "4") {
+    std::cout << "\nYou have collected the ancient middle finger, legend says that this will instant kill a boss... for a price of course...";
+    std::this_thread::sleep_for(std::chrono::milliseconds(800));
+  }
+}
 if (user_action == "p") {
   std::cout << "\n\nHere are the current potions avalible!";
   std::cout << "\nUse the number keys (1-4) to select the potion you want\n";
@@ -98,7 +122,7 @@ if (user_action == "p") {
     std::cout << "Your attack now does: x" << uV << " Value";
     std::cout << "\nThis equals out to be: " << attack * uV << " damage";
   }
-  singlePlayer();
+  main();
   }
 int bossAction = (rand() % 3) + 1;
 if (bossAction == 1) {
@@ -130,11 +154,12 @@ if (bossAction == 3) {
 }
   if (bh < 0.01) {
   std::cout << "\n\nHey! You've beaten me!";
-    return 0; } }
+    return 0; }
   if (bh > 0) {
-  singlePlayer(); } 
+  main(); } 
   if (ph < 10) {
     std::cout << "\n\nHEALTH BOOST POTION AVALIBLE!\n\n";
     hb = hb + 12;
     }
-}
+  }
+  }
