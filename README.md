@@ -5,7 +5,7 @@ This game will be first completely finsihed in C++ and then will be modified to 
 There is no ETA on release date, and this repository only includes my C++ code for the demo.
 Thanks for your interest in my code project!
 
-1[A] - Build demo game [75% Complete]
+1[A] - Build demo game [65% Complete]
    1. Add "Attack" as an action [DONE]
    2. Add "Defend" as an action []
    3. Add "Heal" as an action [DONE]
