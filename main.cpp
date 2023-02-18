@@ -1,9 +1,9 @@
 #include <iostream>
+#include <fstream> 
 #include <string>
 #include <chrono>
 #include <thread>
 #include <cmath>
-#include <fstream> 
 int P1; 
 int riftdamage = 45;
 int temp1 = 30;
@@ -11,39 +11,31 @@ int hb = 12;
 int potions = 0 + P1; 
 int bh = 120; 
 int bha = 16;
-int ph = 30;
-int attack = 1000;
-int attackBoost = 7;
+int ph = 50;
+int attack = 7;
+int attackBoost = 6;
 int uV = 0;
 int heal = 5;
 int score = 0;
 int coins = 0;
-int Ulevel = 1;
 int xp = 0;
-int lvlxp = 100;
 int main() {
 std::string user_potion_pick;
 if (user_potion_pick == "1") {
   hb = hb - 12; }
-if (xp > 99) {
-  std::cout << "\n\nLEVEL UP\n\n";
-  lvlxp = 200;
-  Ulevel = 2;
-}
 std::cout << "\nPlayers Health: " << ph;
 std::cout << "\nBosses Health: " << bh;
-std::cout << "\nCurrent Level: " << Ulevel << ", XP until next level: " << lvlxp - xp;
 xp = score / 2;
 std::cout << "\nScore: " << score;
 std::cout << "\nCoins: " << coins;
 std::cout << "\nXP: " << xp;
 bha = 16;
 std::this_thread::sleep_for(std::chrono::milliseconds(800));
-std::cout << "\n\n[\e[1mA\e[0mttack] - Attacks the opponent\n"; //Press A or a to attack
-std::cout << "[\e[1mH\e[0meal] - Regains some health\n"; //Press H or h to heal
-std::cout << "[\e[1mD\e[0mefend] - Blocks attack\n";
-std::cout << "[\e[1mP\e[0motions] - Use a wide variety of special items to enhance your attack or health!\n"; //Press P or p to use potions
-std::cout << "[P\e[1me\e[0mts] - Self-explanatory...\n"; //Press E or e to use pets
+std::cout << "\n\n[Attack] - Attacks the opponent\n"; //Press A or a to attack
+std::cout << "\n[Heal] - Regains some health\n"; //Press H or h to heal
+std::cout << "\n[Defend] - Blocks attack\n";
+std::cout << "\n[Potions] - Use a wide variety of special items to enhance your attack or health!\n"; //Press P or p to use potions
+std::cout << "\n[Pets] - Self-explanatory...\n"; //Press E or e to use pets
 std::string user_action;
 potions = 0; //Reset potion effects to zero
 if (ph < 0.01) {
@@ -101,7 +93,7 @@ if (user_action == "p") {
     coins = coins - 1;
     hb = 0;
     }
-    if (hb = 0) {
+    if (hb == 0) {
     std::cout << "You can't use the health boost, as it's already been used once..."; 
     }
     
@@ -131,16 +123,26 @@ if (user_action == "p") {
   }
   main();
   }
-int bossAction = (rand() % 2) + 1;
+int bossAction = (rand() % 3) + 0;
+if (bossAction == 0) {
+    std::cout << "\nYour opponent has attacked.";
+    ph = ph - bha;
+    if (bh < 0.01) {
+        std::cout << "\n\nHey! You've beaten me!";
+        return 0;
+    }
+}
 if (bossAction == 1) {
-  std::cout << "\nYour opponent has attacked.";
-  ph = ph - bha;
-  if (bh < 0.01) {
-  std::cout << "\n\nHey! You've beaten me!";
-    return 0; } }
-if (bossAction == 2) {
   std::cout << "\nYour opponent is healing.";
   bh = bh + heal; }
+if (bossAction == 2) {
+    std::cout << "\nYour opponent has attacked.";
+    ph = ph - bha;
+    if (bh < 0.01) {
+        std::cout << "\n\nHey! You've beaten me!";
+        return 0;
+    }
+}
 if (bossAction == 3) {
   ph = ph + 50;
   std::cout << "\nThe boss opened a rift...";
@@ -158,19 +160,56 @@ if (bossAction == 3) {
   std::cout << "The demons leap at you and attack!";
   ph = ph - 30;
   std::this_thread::sleep_for(std::chrono::milliseconds(1200));
-}
-  if (bh < 0.01) {
+      }
+ if (bh < 0.001) {
   std::cout << "\n\nHey! You've beaten me!";
-    std::ofstream MyFile("GAMESTATS.txt");
-    MyFile << "Player Health: " << ph;
-    MyFile << "\nBoss Health: " << bh;
-    MyFile << "\n\nPlayer XP: " << xp;
-    MyFile << "\nPlayer Level: " << Ulevel;
-    return 0; }
+  std::cout << "\nWritting score to file...";
+  std::ofstream MyFile("SCORE.txt");
+  MyFile << "Player Health: " << ph;
+  MyFile << "\nBoss Health: " << bh;
+  MyFile << "\n\nPlayer XP: " << xp;
+  MyFile.close();
+  std::string playAgainA;
+  std::cin >> playAgainA;
+  if (playAgainA == "y") {
+      ph = 0;
+      ph = 50;
+      bh = 0;
+      bh = 120;
+      score = 0;
+      xp = 0;
+      coins = 0;
+      main();
+  }
+  if (playAgainA == "n") {
+      return 0;
+  }
+ }
   if (bh > 0) {
   main(); } 
-  if (ph < 10) {
-    std::cout << "\n\nHEALTH BOOST POTION AVALIBLE!\n\n";
-    hb = hb + 12;
+  if (ph < 0.001) {
+      std::cout << "\n\nThe boss beat you :(";
+      std::cout << "\nWritting score to file...";
+      std::ofstream MyFile("SCORE.txt");
+      MyFile << "Player Health: " << ph;
+      MyFile << "\nBoss Health: " << bh;
+      MyFile << "\n\nPlayer XP: " << xp;
+      MyFile.close();
+      std::cout << "Do you wish to play agin?";
+      std::string playAgain;
+      std::cin >> playAgain;
+      if (playAgain == "y") {
+          ph = 0;
+          ph = 50;
+          bh = 0;
+          bh = 120;
+          score = 0;
+          xp = 0;
+          coins = 0;
+          main();
+      }
+      if (playAgain == "n") {
+          return 0;
+      }
     }
   }
