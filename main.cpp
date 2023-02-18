@@ -3,6 +3,7 @@
 #include <chrono>
 #include <thread>
 #include <cmath>
+#include <fstream> 
 int P1; 
 int riftdamage = 45;
 int temp1 = 30;
@@ -11,8 +12,8 @@ int potions = 0 + P1;
 int bh = 120; 
 int bha = 16;
 int ph = 30;
-int attack = 7;
-int attackBoost = 6;
+int attack = 1000;
+int attackBoost = 7;
 int uV = 0;
 int heal = 5;
 int score = 0;
@@ -130,7 +131,7 @@ if (user_action == "p") {
   }
   main();
   }
-int bossAction = (rand() % 3) + 1;
+int bossAction = (rand() % 2) + 1;
 if (bossAction == 1) {
   std::cout << "\nYour opponent has attacked.";
   ph = ph - bha;
@@ -160,6 +161,11 @@ if (bossAction == 3) {
 }
   if (bh < 0.01) {
   std::cout << "\n\nHey! You've beaten me!";
+    std::ofstream MyFile("GAMESTATS.txt");
+    MyFile << "Player Health: " << ph;
+    MyFile << "\nBoss Health: " << bh;
+    MyFile << "\n\nPlayer XP: " << xp;
+    MyFile << "\nPlayer Level: " << Ulevel;
     return 0; }
   if (bh > 0) {
   main(); } 

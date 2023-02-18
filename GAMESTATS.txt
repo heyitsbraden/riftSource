@@ -1,0 +1,5 @@
+Player Health: 30
+Boss Health: -875
+
+Player XP: 0
+Player Level: 1
