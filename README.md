@@ -5,7 +5,7 @@ This game will be first completely finsihed in C++ and then will be modified to 
 There is no ETA on release date, and this repository only includes my C++ code for the demo.
 Thanks for your interest in my code project!
 
-1[A] - Build demo game [60% Complete]
+1[A] - Build demo game [75% Complete]
    1. Add "Attack" as an action [DONE]
    2. Add "Defend" as an action []
    3. Add "Heal" as an action [DONE]
@@ -14,17 +14,16 @@ Thanks for your interest in my code project!
       2. Add "Attack Amplifier" [DONE, but needs more testing]
       3. Add "Lethality Syrum" [DONE]
       4. Add "Permanent Attack Boost" [DONE]
-   5. Add "Pets" as an action []
-      1. Add "Rock Pet" []
-      2. Add "Fairy Pet" []
-      3. Add "Faithful Doggo" []
-      4. Add "Mini master hand" []
-      5. Add "middle finger" []
+   5. Add "Pets" as an action [50% DONE]
+      1. Add "Rock Pet" [DONE (as a placeholder)]
+      2. Add "Fairy Pet" [DONE (as a placeholder)]
+      3. Add "Faithful Doggo" [DONE (as a placeholder)]
+      4. Add "middle finger" [DONE (as a placeholder)]
    6. Add coins [DONE]
-   7. Add score [DONE, but needs some testing and adjustments]
-   8. Add XP [DONE, but needs some testing and adjustments]
-   9. Add XP levels []
-   10. Add auction/shop
+   7. Add score [DONE]
+   8. Add XP [DONE]
+   9. Add XP levels [DONE]
+   10. Add auction/shop []
 1[B] - Add a multiplayer mode (not important rn)
   1. Server Lists
   2. Usernames

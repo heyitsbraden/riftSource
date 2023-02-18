@@ -19,13 +19,20 @@ int score = 0;
 int coins = 0;
 int Ulevel = 1;
 int xp = 0;
-const char defend[6] = "false";
+int lvlxp = 100;
 int main() {
 std::string user_potion_pick;
 if (user_potion_pick == "1") {
   hb = hb - 12; }
+if (xp > 99) {
+  std::cout << "\n\nLEVEL UP\n\n";
+  lvlxp = 200;
+  Ulevel = 2;
+}
 std::cout << "\nPlayers Health: " << ph;
 std::cout << "\nBosses Health: " << bh;
+std::cout << "\nCurrent Level: " << Ulevel << ", XP until next level: " << lvlxp - xp;
+xp = score / 2;
 std::cout << "\nScore: " << score;
 std::cout << "\nCoins: " << coins;
 std::cout << "\nXP: " << xp;
@@ -46,7 +53,6 @@ if (user_action == "a") {
   std::cout << "\nYou attack the boss.\n";
   bh = bh - attack - potions;
   coins = coins + 3;
-  xp = xp + 7;
   score = score + 15; }
 if (user_action == "d") {
   std::cout << "You defended yourself from the basses attacks!";
@@ -133,8 +139,9 @@ if (bossAction == 1) {
     return 0; } }
 if (bossAction == 2) {
   std::cout << "\nYour opponent is healing.";
-  bh = bh + heal;
+  bh = bh + heal; }
 if (bossAction == 3) {
+  ph = ph + 50;
   std::cout << "\nThe boss opened a rift...";
   std::this_thread::sleep_for(std::chrono::milliseconds(500));
   std::cout << "\nYou peek inside...";
@@ -142,7 +149,6 @@ if (bossAction == 3) {
   std::cout << "\nIt doesn't look good...";
   std::this_thread::sleep_for(std::chrono::milliseconds(1200));
   std::cout << "You use an extra health potion to preapre for what the rift will bring...";
-  ph = ph + 50;
   std::this_thread::sleep_for(std::chrono::milliseconds(1200));
   ph = ph - riftdamage;
   std::this_thread::sleep_for(std::chrono::milliseconds(500));
@@ -161,5 +167,4 @@ if (bossAction == 3) {
     std::cout << "\n\nHEALTH BOOST POTION AVALIBLE!\n\n";
     hb = hb + 12;
     }
-  }
   }
