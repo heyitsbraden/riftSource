@@ -1,11 +1,11 @@
 # RiFTBossFightSourcecode
 The source code for RiFT Boss Fight: Evolved
->------------------------------------------<
+------------------------------------------
 Changelog (C++ Pre-Alpha 0.002)
 1. Removed "middle finger" as a pet
 2. Attack Amplifier potion has finished testing
 3. Added the auction as a multiplayer feature and not a singleplayer feature
->------------------------------------------<
+------------------------------------------
 This game will be first completely finsihed in C++ and then will be modified to work in Unreal Engine 4.
 There is no ETA on release date, and this repository only includes my C++ code for the demo. For Unreal Engine 4 builds, go to releases.
 Thanks for your interest in my code project!
