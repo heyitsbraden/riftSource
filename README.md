@@ -18,7 +18,7 @@ The source code for RiFT Boss Fight: Evolved
 1. Added actions for all the pets
 2. Re-added the middle finger
 ------------------------------------------
-Changelog (C++ Pre-Alpha 5)
+### Changelog (C++ Pre-Alpha 5)
 1. Added new selection system for the actions, instead of using: a, h, d, p, e, now using 1, 2, 3, 4, 5
 2. General bug fixes
 ------------------------------------------
@@ -28,6 +28,7 @@ Thanks for your interest in my code project!
 
 # To-Do List for the game...
 
+TOTAL COMPLETION OF GAME: [~1%]
 1[A] - Build demo game [99% Complete,(Needs Testing for some parts) Ready to move on to Unreal Engine]
    1. Add "Attack" as an action [DONE]
    2. Add "Defend" as an action [DONE]
@@ -58,12 +59,9 @@ Thanks for your interest in my code project!
   4. Anti-cheat Implementation []
   5. Invite System []
   6. Add auction/shop []
-TOTAL COMPLETION OF GAME: [NULL]
 
 # FULL LIST OF ACTIONS
 
---------------------------------------------
->>
 Full list of actions:
 - Attack
 - Defend
@@ -82,5 +80,3 @@ Full list of potions:
 XP = Score divided by 2
 1 attack = 14 xp
 100 xp = 1 level
->>
----------------------------------------------
