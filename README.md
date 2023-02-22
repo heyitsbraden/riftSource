@@ -14,6 +14,10 @@ Changelog (C++ Pre-Alpha 3)
 2. Added back rifting for the boss
 3. Re-did XP and Levels
 ------------------------------------------
+Changelog (C++ Pre-Alpha 4)
+1. Added actions for all the pets
+2. Re-added the middle finger
+------------------------------------------
 This game will be first completely finsihed in C++ and then will be modified to work in Unreal Engine 4.
 There is no ETA on release date, and this repository only includes my C++ code for the demo. For Unreal Engine 4 builds, go to releases.
 Thanks for your interest in my code project!
