@@ -22,6 +22,10 @@ The source code for RiFT Boss Fight: Evolved
 1. Added new selection system for the actions, instead of using: a, h, d, p, e, now using 1, 2, 3, 4, 5
 2. General bug fixes
 ------------------------------------------
+### Changelog (C++ Pre-Alpha 6)
+1. Fixed Health Boost bug
+2. Added coins system for potions (AKA: Gave coins an actual purpose)
+------------------------------------------
 This game will be first completely finsihed in C++ and then will be modified to work in Unreal Engine 4.
 There is no ETA on release date, and this repository only includes my C++ code for the demo. For Unreal Engine 4 builds, go to releases.
 Thanks for your interest in my code project!
@@ -30,12 +34,12 @@ Thanks for your interest in my code project!
 
 TOTAL COMPLETION OF GAME: [~1%]
 
-1[A] - Build demo game [99% Complete, Ready to move on to Unreal Engine]
+1[A] - Build demo game [100% Complete, Ready to move on to Unreal Engine]
    1. Add "Attack" as an action [DONE]
    2. Add "Defend" as an action [DONE]
    3. Add "Heal" as an action [DONE]
    4. Add "Potions" as an action [DONE]
-      1. Add "Health Boost" [DONE - found a bug, therefore needs testing]
+      1. Add "Health Boost" [DONE]
       2. Add "Attack Amplifier" [DONE]
       3. Add "Lethality Syrum" [DONE]
       4. Add "Permanent Attack Boost" [DONE]
