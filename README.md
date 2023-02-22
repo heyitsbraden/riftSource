@@ -13,9 +13,9 @@ This game will be first completely finsihed in C++ and then will be modified to 
 There is no ETA on release date, and this repository only includes my C++ code for the demo. For Unreal Engine 4 builds, go to releases.
 Thanks for your interest in my code project!
 
-1[A] - Build demo game [90% Complete, Ready to move on to Unreal Engine]
+1[A] - Build demo game [95% Complete, Ready to move on to Unreal Engine]
    1. Add "Attack" as an action [DONE]
-   2. Add "Defend" as an action []
+   2. Add "Defend" as an action [DONE, needs testing]
    3. Add "Heal" as an action [DONE]
    4. Add "Potions" as an action [DONE]
       1. Add "Health Boost" [DONE]
@@ -29,7 +29,7 @@ Thanks for your interest in my code project!
    6. Add coins [DONE]
    7. Add score [DONE]
    8. Add XP [DONE]
-   9. Add XP levels [DONE]
+   9. Add XP levels [DONE, needs more testing since it barely works well]
 7. Let people try the demo game, and request features [DONE]
 8. Transition to Unity / Unreal Engine [10%]
 9. Modify C++ script to work in Unity / Unreal Engine [1%]
