@@ -22,7 +22,7 @@ int xp = 0;
 int lvl = 1;
 int xptolevelup = 100;
 int lvlxp = 100;
-int userPet;
+int userPet; int mfpetDamn = 21;
 int main() {
     if (xp > xptolevelup) {
         xp = xp - xptolevelup;
@@ -39,6 +39,8 @@ int main() {
     std::cout << "\nScore: " << score;
     std::cout << "\nCoins: " << coins;
     std::cout << "\nXP: " << xp;
+    std::cout << "\nXP Level: " << lvl;
+    std::cout << "\nXP to next level up: " << lvlxp - xp;
     bha = 16;
     std::this_thread::sleep_for(std::chrono::milliseconds(800));
     std::cout << "\n\n[Attack] - Attacks the opponent\n"; //Press A or a to attack
@@ -71,6 +73,16 @@ int main() {
             bha = bha - 6;
             score = score + 21;
         }
+        if (userPet == 4) {
+            if (mfpetDamn == 0) {
+                std::cout << "\nThe middle finger does no damage...";
+            }
+            std::cout << "\nThe middle finger attacks!";
+            bh = bh - mfpetDamn;
+            std::this_thread::sleep_for(std::chrono::milliseconds(800));
+            mfpetDamn = 0;
+            
+        }
         bh = bh - attack - potions;
         coins = coins + 3;
         score = score + 14;
@@ -93,6 +105,16 @@ int main() {
             bha = bha - 6;
             score = score + 21;
         }
+        if (userPet == 4) {
+            if (mfpetDamn == 0) {
+                std::cout << "\nThe middle finger does no damage...";
+            }
+            std::cout << "\nThe middle finger attacks!";
+            bh = bh - mfpetDamn;
+            std::this_thread::sleep_for(std::chrono::milliseconds(800));
+            mfpetDamn = 0;
+
+        }
         bha = 0;
     }
     if (user_action == "h") {
@@ -112,6 +134,16 @@ int main() {
             bh = bh - 12;
             bha = bha - 6;
             score = score + 21;
+        }
+        if (userPet == 4) {
+            if (mfpetDamn == 0) {
+                std::cout << "\nThe middle finger does no damage...";
+            }
+            std::cout << "\nThe middle finger attacks!";
+            bh = bh - mfpetDamn;
+            std::this_thread::sleep_for(std::chrono::milliseconds(800));
+            mfpetDamn = 0;
+
         }
         ph = ph + heal;
     }
@@ -147,6 +179,7 @@ int main() {
             std::cout << "\nThe middle finger will instant kill a boss, but you will take a lot of damage in return, use wisely.";
             userPet = 4;
         }
+        main();
     }
     if (user_action == "p") {
         std::cout << "\n\nHere are the current potions avalible!";
