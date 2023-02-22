@@ -41,6 +41,7 @@ int main() {
     std::cout << "\nXP: " << xp;
     std::cout << "\nXP Level: " << lvl;
     std::cout << "\nXP to next level up: " << lvlxp - xp;
+    std::cout << "\n\nUse number keys 1-4 to select action";
     bha = 16;
     std::this_thread::sleep_for(std::chrono::milliseconds(800));
     std::cout << "\n\n[Attack] - Attacks the opponent\n"; //Press A or a to attack
@@ -55,7 +56,7 @@ int main() {
         return 0;
     }
     std::cin >> user_action;
-    if (user_action == "a") {
+    if (user_action == "1") {
         std::cout << "\nYou attack the boss.\n";
         if (userPet == 1) {
             std::cout << "\nThe rock pet did extra damage!";
@@ -87,7 +88,7 @@ int main() {
         coins = coins + 3;
         score = score + 14;
     }
-    if (user_action == "d") {
+    if (user_action == "3") {
         std::cout << "You defended yourself from the basses attacks!";
         if (userPet == 1) {
             std::cout << "\nThe rock pet did extra damage!";
@@ -117,7 +118,7 @@ int main() {
         }
         bha = 0;
     }
-    if (user_action == "h") {
+    if (user_action == "2") {
         std::cout << "\nYou regain some health.\n";
         if (userPet == 1) {
             std::cout << "\nThe rock pet did extra damage!";
@@ -147,7 +148,7 @@ int main() {
         }
         ph = ph + heal;
     }
-    if (user_action == "e") {
+    if (user_action == "5") {
         std::cout << "\nHere are the pets currently avalible";
         std::cout << "\n[Rock Pet]";
         std::cout << "\n[Fairy Pet]";
@@ -181,7 +182,7 @@ int main() {
         }
         main();
     }
-    if (user_action == "p") {
+    if (user_action == "4") {
         std::cout << "\n\nHere are the current potions avalible!";
         std::cout << "\nUse the number keys (1-4) to select the potion you want\n";
         std::cout << "\n[Health Boost]";
