@@ -2,6 +2,7 @@
 The source code for RiFT Boss Fight: Evolved
 ------------------------------------------
 This game will be first completely finsihed in C++ and then will be modified to work in Unreal Engine 4.
+This game may be re-writen in C# so it will be compatible with Unity.
 
 ### To-Do List
 
