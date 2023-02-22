@@ -1,38 +1,11 @@
 # RiFTBossFightSourcecode
 The source code for RiFT Boss Fight: Evolved
 ------------------------------------------
-### Changelog (C++ Pre-Alpha 2)
-1. Removed "middle finger" as a pet
-2. Attack Amplifier potion has finished testing
-3. Added the auction as a multiplayer feature and not a singleplayer feature
-4. Added a "do you want to play again?" dialogue screen after death
-5. Fixed the bug where the boss will only do the rift action, but for right now, it can't rift at all.
-6. Added the feature of writting your score to a file named "SCORE.txt"
-------------------------------------------
-### Changelog (C++ Pre-Alpha 3)
-1. Added level 2
-2. Added back rifting for the boss
-3. Re-did XP and Levels
-------------------------------------------
-### Changelog (C++ Pre-Alpha 4)
-1. Added actions for all the pets
-2. Re-added the middle finger
-------------------------------------------
-### Changelog (C++ Pre-Alpha 5)
-1. Added new selection system for the actions, instead of using: a, h, d, p, e, now using 1, 2, 3, 4, 5
-2. General bug fixes
-------------------------------------------
-### Changelog (C++ Pre-Alpha 6)
-1. Fixed Health Boost bug
-2. Added coins system for potions (AKA: Gave coins an actual purpose)
-------------------------------------------
 This game will be first completely finsihed in C++ and then will be modified to work in Unreal Engine 4.
-There is no ETA on release date, and this repository only includes my C++ code for the demo. For Unreal Engine 4 builds, go to releases.
-Thanks for your interest in my code project!
 
-# To-Do List for the game...
+### To-Do List
 
-TOTAL COMPLETION OF GAME: [~1%]
+TOTAL COMPLETION OF GAME: [NULL]
 
 1[A] - Build demo game [100% Complete, Ready to move on to Unreal Engine]
    1. Add "Attack" as an action [DONE]
