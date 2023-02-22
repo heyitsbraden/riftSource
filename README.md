@@ -30,7 +30,7 @@ Thanks for your interest in my code project!
 
 TOTAL COMPLETION OF GAME: [~1%]
 
-1[A] - Build demo game [99% Complete,(Needs Testing for some parts) Ready to move on to Unreal Engine]
+1[A] - Build demo game [99% Complete, Ready to move on to Unreal Engine]
    1. Add "Attack" as an action [DONE]
    2. Add "Defend" as an action [DONE]
    3. Add "Heal" as an action [DONE]
