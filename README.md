@@ -18,6 +18,10 @@ Changelog (C++ Pre-Alpha 4)
 1. Added actions for all the pets
 2. Re-added the middle finger
 ------------------------------------------
+Changelog (C++ Pre-Alpha 5)
+1. Added new selection system for the actions, instead of using: a, h, d, p, e, now using 1, 2, 3, 4, 5
+2. General bug fixes
+------------------------------------------
 This game will be first completely finsihed in C++ and then will be modified to work in Unreal Engine 4.
 There is no ETA on release date, and this repository only includes my C++ code for the demo. For Unreal Engine 4 builds, go to releases.
 Thanks for your interest in my code project!
