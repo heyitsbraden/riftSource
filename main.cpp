@@ -192,23 +192,41 @@ int main() {
         std::cin >> user_potion_pick;
         if (user_potion_pick == "1") {
             std::cout << "\nYou use the health boost\n";
+            if (hb == 0) {
+            std::cout << "You can't use the health boost, as it's already been used once..."; }
+            if (coins == 0) {
+            std::cout << "\nYou cannot use this. Reason: not enough coins...";
+              main();
+            }
             ph = ph + hb;
             coins = coins - 1;
             hb = 0;
         }
-        if (hb == 0) {
-            std::cout << "You can't use the health boost, as it's already been used once...";
-        }
 
         if (user_potion_pick == "2") {
+        if (coins < 6) {
+        std::cout << "\nYou cannot use this. Reason: not enough coins...";
+              main();
+            }
+            coins = coins - 6;
             attack = attack + attackBoost;
         }
         if (user_potion_pick == "3") {
+            if (coins < 21) {
+            std::cout << "\nYou cannot use this. Reason: not enough coins...";
+              main();
+            }
+            coins = coins - 21;
             std::cout << "\nYou splash the lethality syrum on the boss, he takes 30 damage.\n";
             bh = bh - temp1;
             temp1 = temp1 - 30;
         }
         if (user_potion_pick == "4") {
+            if (coins < 26) {
+            std::cout << "\nYou cannot use this. Reason: not enough coins...";
+              main();
+            }
+            coins = coins - 26;
             std::string userVariable;
             std::cin >> userVariable;
             if (userVariable == "1") {
@@ -225,7 +243,7 @@ int main() {
             std::cout << "\nThis equals out to be: " << attack * uV << " damage";
         }
         main();
-    }
+      }
     int bossAction = (rand() % 4) + 1;
     if (bossAction == 0) {
         ph = ph + 50;
