@@ -22,6 +22,7 @@ int xp = 0;
 int lvl = 1;
 int xptolevelup = 100;
 int lvlxp = 100;
+int userPet;
 int main() {
     if (xp > xptolevelup) {
         xp = xp - xptolevelup;
@@ -54,16 +55,64 @@ int main() {
     std::cin >> user_action;
     if (user_action == "a") {
         std::cout << "\nYou attack the boss.\n";
+        if (userPet == 1) {
+            std::cout << "\nThe rock pet did extra damage!";
+            bh = bh - 12;
+            score = score + 21;
+        }
+        if (userPet == 2) {
+            std::cout << "\nThe fairy pet healed you!";
+            ph = ph + 12;
+            score = score + 21;
+        }
+        if (userPet == 3) {
+            std::cout << "\nThe faithful doggo attacked the boss, and weakened his attack by some.";
+            bh = bh - 12;
+            bha = bha - 6;
+            score = score + 21;
+        }
         bh = bh - attack - potions;
         coins = coins + 3;
         score = score + 14;
     }
     if (user_action == "d") {
         std::cout << "You defended yourself from the basses attacks!";
+        if (userPet == 1) {
+            std::cout << "\nThe rock pet did extra damage!";
+            bh = bh - 12;
+            score = score + 21;
+        }
+        if (userPet == 2) {
+            std::cout << "\nThe fairy pet healed you!";
+            ph = ph + 12;
+            score = score + 21;
+        }
+        if (userPet == 3) {
+            std::cout << "\nThe faithful doggo attacked the boss, and weakened his attack by some.";
+            bh = bh - 12;
+            bha = bha - 6;
+            score = score + 21;
+        }
         bha = 0;
     }
     if (user_action == "h") {
         std::cout << "\nYou regain some health.\n";
+        if (userPet == 1) {
+            std::cout << "\nThe rock pet did extra damage!";
+            bh = bh - 12;
+            score = score + 21;
+        }
+        if (userPet == 2) {
+            std::cout << "\nThe fairy pet healed you!";
+            ph = ph + 12;
+            score = score + 21;
+        }
+        if (userPet == 3) {
+            std::cout << "\nThe faithful doggo attacked the boss, and weakened his attack by some.";
+            bh = bh - 12;
+            bha = bha - 6;
+            score = score + 21;
+        }
         ph = ph + heal;
     }
     if (user_action == "e") {
@@ -77,18 +126,26 @@ int main() {
         if (user_pets == "1") {
             std::cout << "\nThe rock pet joins your team";
             std::this_thread::sleep_for(std::chrono::milliseconds(800));
+            std::cout << "\nThe rock pet will do extra damage for every attack you do.";
+            userPet = 1;
         }
         if (user_pets == "2") {
             std::cout << "\nThe fairy pet joins your team";
             std::this_thread::sleep_for(std::chrono::milliseconds(800));
+            std::cout << "\nThe fairy pet will heal you after each turn";
+            userPet = 2;
         }
         if (user_pets == "3") {
             std::cout << "The faithful doggo joins your team";
             std::this_thread::sleep_for(std::chrono::milliseconds(800));
+            std::cout << "\nThe faithful doggo will defend you, and attack the boss each turn";
+            userPet = 3;
         }
         if (user_pets == "4") {
             std::cout << "\nYou have collected the ancient middle finger, legend says that this will instant kill a boss... for a price of course...";
             std::this_thread::sleep_for(std::chrono::milliseconds(800));
+            std::cout << "\nThe middle finger will instant kill a boss, but you will take a lot of damage in return, use wisely.";
+            userPet = 4;
         }
     }
     if (user_action == "p") {
