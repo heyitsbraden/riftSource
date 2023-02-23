@@ -6,7 +6,7 @@ This game may be re-writen in C# so it will be compatible with Unity.
 
 ### To-Do List
 
-TOTAL COMPLETION OF GAME: [NULL]
+TOTAL COMPLETION OF GAME: [35%]
 
 1[A] - Build demo game [100% Complete, Ready to move on to Unreal Engine]
    1. Add "Attack" as an action [DONE]
@@ -26,18 +26,10 @@ TOTAL COMPLETION OF GAME: [NULL]
    7. Add score [DONE]
    8. Add XP [DONE]
    9. Add XP levels [DONE]
-7. Let people try the demo game, and request features [DONE]
-8. Transition to Unity / Unreal Engine []
-9. Modify C++ script to work in Unity / Unreal Engine []
-10. Build character models for Unity / Unreal Engine []
-11. Add asset animations []
-12. Add multiplayer []
-  1. Server Lists []
-  2. Usernames []
-  3. Friend Systems []
-  4. Anti-cheat Implementation []
-  5. Invite System []
-  6. Add auction/shop []
+7. Transition to Unity / Unreal Engine [DONE]
+8. Modify C++ script to work in Unity / Unreal Engine [0%]
+9. Build character models for Unity / Unreal Engine [50%]
+10. Add asset animations [20%]
 
 # FULL LIST OF ACTIONS
 
