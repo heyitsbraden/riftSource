@@ -1,6 +1,3 @@
-# RiFTBossFightSourcecode
-The source code for RiFT Boss Fight: Evolved
-
 ### To-Do List
 
 TOTAL COMPLETION OF GAME: [NULL]
@@ -9,15 +6,25 @@ TOTAL COMPLETION OF GAME: [NULL]
 2. Add "Defend" as an action [DONE]
 3. Add "Heal" as an action [DONE]
 4. Add "Potions" as an action [DONE]
-  i. Add "Health Boost" [DONE]
-  ii. Add "Attack Amplifier" [DONE]
-  iii. Add "Lethality Syrum" [DONE]
-  iv. Add "Permanent Attack Boost" [DONE]
+
+i. Add "Health Boost" [DONE]
+
+ii. Add "Attack Amplifier" [DONE]
+
+iii. Add "Lethality Syrum" [DONE]
+
+iv. Add "Permanent Attack Boost" [DONE]
+
 5. Add "Pets" as an action [DONE]
-  i. Add "Rock Pet" [DONE]
-  ii. Add "Fairy Pet" [DONE]
-  iii. Add "Faithful Doggo" [DONE]
-  iv. Add "middle finger" [DONE]
+
+i. Add "Rock Pet" [DONE]
+
+ii. Add "Fairy Pet" [DONE]
+
+iii. Add "Faithful Doggo" [DONE]
+
+iv. Add "middle finger" [DONE]
+
 6. Add coins [DONE]
 7. Add score [DONE]
 8. Add XP [DONE]
@@ -25,26 +32,7 @@ TOTAL COMPLETION OF GAME: [NULL]
 10. Add save games feature [10%]
 11. Add multiplayer []
 12. Make a native windows executable with sounds and graphics []
-   i. Graphics []
-   ii. Sounds []
 
-# FULL LIST OF ACTIONS
+i. Graphics []
 
-Full list of actions:
-- Attack
-- Defend
-- Heal
-
-Full list of modifiers:
-- Potions
-- Pets
-
-Full list of potions:
-- Attack amplifier
-- Health Boost
-- Lethality Syrum
-- Permanent Attack Boost
-
-XP = Score divided by 2
-1 attack = 14 xp
-100 xp = 1 level
+ii. Sounds []
