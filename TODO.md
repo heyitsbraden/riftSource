@@ -1,6 +1,3 @@
-# RiFT
-This readme file will just include the to-do list, and any special things like current-version changelogs or whatnot.
-
 ### To-Do List
 
 TOTAL COMPLETION OF GAME: [NULL]
